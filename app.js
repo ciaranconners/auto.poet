@@ -7,7 +7,7 @@ var app  = express();
 app.get('/compose', function(req, res) {
     poet.writePoem(14, function(result) {
       res.status(200).json(result);
-      console.log('poem sent to client');
+      console.log('GET: poem sent to client');
     });
 });
 
