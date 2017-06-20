@@ -20,8 +20,15 @@
   "dependencies": {
     "angular": "^1.6.4",
     "body-parser": "^1.17.2",
+    "consolidate": "^0.14.5",
     "express": "^4.15.3",
+    "express-mailer": "^0.3.1",
+    "mailer": "^0.6.7",
     "mongoose": "^4.10.7",
-    "nodemon": "^1.11.0"
+    "node": "0.0.0",
+    "nodemailer": "^4.0.1",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nodemon": "^1.11.0",
+    "swig": "^1.4.2"
   }
 }

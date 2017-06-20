@@ -9,6 +9,7 @@ angular.module('poem-maker')
       'He will not see me stopping here', 'To watch his woods fill up with snow.'];
 
       this.lines = 14;
+      this.email = 'me@example.com';
 
       this.onClick = function() {
         var text;
@@ -26,7 +27,11 @@ angular.module('poem-maker')
       };
 
 
-      this.retrieve = function() {};
+      this.retrieve = function() {
+        console.log('inside retrieve');
+        var email = this.email;
+        poet.emailPoems(email);
+      };
     },
 
     templateUrl: './templates/app.html'

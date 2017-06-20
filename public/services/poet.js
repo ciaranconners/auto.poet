@@ -15,6 +15,11 @@ angular.module('poem-maker')
 
     $http.post(url, data, config).then(function success() {console.log('success');}, function error(err) {console.error(err);});
   };
+
+  this.emailPoems = function(emailAddress) {
+    $http.get('http://127.0.0.1:4568/retrieve', {params:{"email":emailAddress}})
+      .then(function(response) {}, function(err) {console.error(err);});
+  };
 });
 
 

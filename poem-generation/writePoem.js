@@ -42,16 +42,21 @@ poet.writePoem = function(numberOfLines, callback) {
   for (let i = 0; i < numberOfLines; i++) {
     getRandomIndex(poetry, function(data) {
       var index = parseInt(data);
-      getRandomIndex(poetry[index].text, function(data2) {
-        if (poetry[index].text === undefined) {
-          console.log('better try again');
-        }
-        var index2 = parseInt(data2);
-        result.push(poetry[index].text[index2]);
-        if (result.length === numberOfLines) {
-          callback(result);
-        }
-      });
+      if (poetry[index] !== undefined) {
+        getRandomIndex(poetry[index].text, function(data2) {
+          var index2 = parseInt(data2);
+          result.push(poetry[index].text[index2]);
+          if (result.length === numberOfLines) {
+            callback(result);
+          }
+        });
+      }
+      // } else {
+      //   console.log('better try again');
+      //   callback(['oft times the best laid plans', 'of mice and men']);
+      //   return;
+      // }
+
     });
   }
 };
