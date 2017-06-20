@@ -8,7 +8,7 @@ angular.module('poem-maker')
       this.poem = ['Whose woods are these I think I know;', 'His house is in the village though;',
       'He will not see me stopping here', 'To watch his woods fill up with snow.'];
 
-      this.lines = 0;
+      this.lines = 14;
 
       this.onClick = function() {
         var text;
@@ -18,7 +18,14 @@ angular.module('poem-maker')
           });
       };
 
-      this.save = function() {};
+      this.save = function() {
+        var poem = this.poem;
+        poet.savePoem(poem, function() {
+          console.log('post request sent');
+        });
+      };
+
+
       this.retrieve = function() {};
     },
 

@@ -1,8 +1,14 @@
 var poet = require('./poem-generation/writePoem.js');
 var express = require('express');
+var bodyParser = require('body-parser');
+var Poem = require('./db/models/Poem');
+var db = require('./db/config');
+var mongoose = require('mongoose');
 var app  = express();
 
 app.use(express.static(__dirname + '/public'));
+
+var jsonParser = bodyParser.json();
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -25,8 +31,29 @@ app.get('/compose', function(req, res) {
 // if the user hits save, then the client
 // sends the text back to the server and:
 
-app.post('/save', function(req, res) {
-  // the text is thrown in the database
+app.post('/save', jsonParser, function(req, res) {
+  console.log('POST: saving poem');
+  res.sendStatus(201);
+  Poem.findOne({poem: JSON.parse(req.body.poem)}).exec(function(err, found) {
+    if (found) {
+      console.log('poem already in the DB');
+    } else {
+       var newPoem = new Poem({poem: JSON.parse(req.body.poem)});
+  newPoem.save(function(err){
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('poem saved');
+    }
+  });
+    }
+  });
+
+
+
+
+
 });
 
 module.exports = app;
+

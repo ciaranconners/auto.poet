@@ -1,9 +1,9 @@
   <div class="app">
     <div class="btn-group" style="display: block;">
-      <button type="button" ng-click="$ctrl.onClick()">Click For A Poem!</button>
       <label for="lines">How Many Lines Would You Like?</label>
       <input type="text" ng-model="$ctrl.lines">
-      <button type="button" ng-click="$ctrl.save">Click To Save This Poem</button>
+      <button type="button" ng-click="$ctrl.onClick()">Click To Generate Your Poem</button>
+      <button type="button" ng-click="$ctrl.save()">Click To Save This Poem</button>
       <button type="button" ng-click="$ctrl.retrieve">Click To See Saved Poems</button>
     </div>
     <div>

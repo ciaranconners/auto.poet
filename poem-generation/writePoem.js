@@ -43,6 +43,9 @@ poet.writePoem = function(numberOfLines, callback) {
     getRandomIndex(poetry, function(data) {
       var index = parseInt(data);
       getRandomIndex(poetry[index].text, function(data2) {
+        if (poetry[index].text === undefined) {
+          console.log('better try again');
+        }
         var index2 = parseInt(data2);
         result.push(poetry[index].text[index2]);
         if (result.length === numberOfLines) {

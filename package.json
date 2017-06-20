@@ -19,7 +19,9 @@
   "homepage": "https://github.com/ciaranconners/hrr24-mvp#readme",
   "dependencies": {
     "angular": "^1.6.4",
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "mongoose": "^4.10.7",
     "nodemon": "^1.11.0"
   }
 }
