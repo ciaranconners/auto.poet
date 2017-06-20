@@ -1,0 +1,44 @@
+body {
+    background-color: lightblue;
+    font-family:Garamond, Georgia, serif;
+}
+h1 {
+  letter-spacing: 1.5px;
+}
+h2 {
+  letter-spacing: 1.5px;
+}
+button {
+  font-family:Garamond, Georgia, serif;
+  font-size:90%;
+  background-color: grey
+  letter-spacing: 1.5px;
+}
+.btn-group {
+  background-color: lightgrey;
+  letter-spacing: 1.5px;
+  font-size: 80%;
+}
+.lineinput {
+  background:  #ccc;
+  font-family:Garamond, Georgia, serif;
+  box-shadow: 0 0 5px #666 inset;
+  color: #333;
+  width: 50px;
+  outline: none;
+  font-size: 90%;
+  letter-spacing: 1.5px;
+}
+.emailinput {
+  background:  #ccc;
+  font-family:Garamond, Georgia, serif;
+  box-shadow: 0 0 5px #666 inset;
+  color: #333;
+  width: 200px;
+  outline: none;
+  font-size: 90%;
+  letter-spacing: 1.5px;
+}
+.poem {
+  letter-spacing: 2px;
+}

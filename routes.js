@@ -18,11 +18,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-// on the client => something to click that will send this request to the compose endpoint:
-
 app.get('/compose', function(req, res) {
   var lines = parseInt(req.query.param1);
-  //console.log(lines);
   poet.writePoem(lines, function(result) {
     res.status(200).json(result);
     console.log('GET: poem sent to client');
@@ -49,8 +46,8 @@ app.get('/retrieve', function(req, res) {
       smtpTrans = nodemailer.createTransport({
           service: 'Gmail',
           auth: {
-            user: "someone@gmail.com",
-            pass: "password"
+            user: "ciaranconners@gmail.com",
+            pass: "Easter2016"
           }
         });
         smtpTrans.sendMail({

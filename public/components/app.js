@@ -5,8 +5,19 @@ angular.module('poem-maker')
 
       var that = this;
 
-      this.poem = ['Whose woods are these I think I know;', 'His house is in the village though;',
-      'He will not see me stopping here', 'To watch his woods fill up with snow.'];
+      this.poem = [
+        'There all the golden codgers lay,',
+        'There the silver dew,',
+        'And the great water sighed for love,',
+        'And the wind sighed too.',
+        'Man-picker Niamh leant and sighed',
+        'By Oisin on the grass;',
+        'There sighed amid his choir of love',
+        'Tall Pythagoras.',
+        'Plotinus came and looked about,',
+        'The salt-flakes on his breast,',
+        'And having stretched and yawned awhile',
+        'Lay sighing like the rest.'];
 
       this.lines = 14;
       this.email = 'me@example.com';
@@ -16,6 +27,7 @@ angular.module('poem-maker')
         var lines = this.lines;
           poet.getPoem(lines, function(response) {
             that.poem = response;
+            that.lines = '';
           });
       };
 
@@ -31,6 +43,7 @@ angular.module('poem-maker')
         console.log('inside retrieve');
         var email = this.email;
         poet.emailPoems(email);
+        this.email = '';
       };
     },
 
