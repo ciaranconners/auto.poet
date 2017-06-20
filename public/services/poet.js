@@ -13,7 +13,7 @@ angular.module('poem-maker')
     };
     var data = {poem: JSON.stringify(poem)};
 
-    $http.post(url, data, config).then(function success() {console.log('success');}, function error(err) {console.error(err);});
+    $http.post(url, data, config).then(function success() {console.log('poem saved');}, function error(err) {console.error(err);});
   };
 
   this.emailPoems = function(emailAddress) {

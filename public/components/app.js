@@ -34,15 +34,14 @@ angular.module('poem-maker')
       this.save = function() {
         var poem = this.poem;
         poet.savePoem(poem, function() {
-          console.log('post request sent');
         });
       };
 
 
       this.retrieve = function() {
-        console.log('inside retrieve');
         var email = this.email;
         poet.emailPoems(email);
+        console.log('Thank you! The archive should arrive shortly.');
         this.email = '';
       };
     },
