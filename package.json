@@ -1,0 +1,25 @@
+{
+  "name": "hrr24-mvp",
+  "version": "1.0.0",
+  "description": "MVP",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciaranconners/hrr24-mvp.git"
+  },
+  "author": "ciaranconners",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciaranconners/hrr24-mvp/issues"
+  },
+  "homepage": "https://github.com/ciaranconners/hrr24-mvp#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0"
+  }
+}

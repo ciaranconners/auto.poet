@@ -53,4 +53,6 @@ poet.writePoem = function(numberOfLines, callback) {
   }
 };
 
+// getRandomIndex([1, 2, 3], function(idx) {console.log(idx);});
+
 module.exports = poet;
