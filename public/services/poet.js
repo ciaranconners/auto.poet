@@ -21,14 +21,3 @@ angular.module('poem-maker')
       .then(function(response) {}, function(err) {console.error(err);});
   };
 });
-
-
-
-
-  //  url: 'http://127.0.0.1:4568/save',
-  //     headers: {"Content-Type": "application/json"},
-  //     data: { poem: poem }
-  //   };
-  //   $http.post(req)
-  //     .then(function success(response) {callback();}, function error(err) {console.error(err);});
-  // };

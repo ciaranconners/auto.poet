@@ -3,11 +3,6 @@ var fs = require('fs');
 var querystring = require('querystring');
 var req = require('request');
 
-// generating a random poem is easy and can be a fun feature of the site;
-// but having a desktop interface to cull these associations is my goal
-
-// random.org query object:
-
 var poet = {};
 
 var getRandomIndex = function(dataset, callback) {
@@ -37,7 +32,7 @@ var getRandomIndex = function(dataset, callback) {
 };
 
 poet.writePoem = function(numberOfLines, callback) {
-  var result = []; // promise.all on the array
+  var result = [];
 
   for (let i = 0; i < numberOfLines; i++) {
     getRandomIndex(poetry, function(data) {
@@ -51,12 +46,6 @@ poet.writePoem = function(numberOfLines, callback) {
           }
         });
       }
-      // } else {
-      //   console.log('better try again');
-      //   callback(['oft times the best laid plans', 'of mice and men']);
-      //   return;
-      // }
-
     });
   }
 };

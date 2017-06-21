@@ -46,12 +46,12 @@ app.get('/retrieve', function(req, res) {
       smtpTrans = nodemailer.createTransport({
           service: 'Gmail',
           auth: {
-            user: "ciaranconners@gmail.com",
-            pass: "Easter2016"
+            user: "wbyeats@sligo.com",
+            pass: "password"
           }
         });
         smtpTrans.sendMail({
-          from: 'ciaranconners@gmail.com',
+          from: 'wbyeats@sligo.com',
           to: userEmail,
           subject: 'auto.poet',
           text: toSend
@@ -65,10 +65,6 @@ app.get('/retrieve', function(req, res) {
     }
   });
 });
-
-// compose sends the text up to the client
-// if the user hits save, then the client
-// sends the text back to the server and:
 
 app.post('/save', jsonParser, function(req, res) {
   console.log('POST: saving poem');
