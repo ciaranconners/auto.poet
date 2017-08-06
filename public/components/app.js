@@ -22,12 +22,15 @@ angular.module('poem-maker')
       this.lines = 14;
       this.email = 'me@example.com';
 
+      this.isLoading = false;
+
       this.onClick = function() {
+        this.isLoading = true;
         var text;
         var lines = this.lines;
           poet.getPoem(lines, function(response) {
             that.poem = response;
-            that.lines = '';
+            that.isLoading = false;
           });
       };
 
@@ -36,7 +39,6 @@ angular.module('poem-maker')
         poet.savePoem(poem, function() {
         });
       };
-
 
       this.retrieve = function() {
         var email = this.email;

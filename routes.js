@@ -46,12 +46,12 @@ app.get('/retrieve', function(req, res) {
       smtpTrans = nodemailer.createTransport({
           service: 'Gmail',
           auth: {
-            user: "wbyeats@sligo.com",
-            pass: "password"
+            user: "ciaranconners@gmail.com",
+            pass: "Easter2016"
           }
         });
         smtpTrans.sendMail({
-          from: 'wbyeats@sligo.com',
+          from: 'ciaranconners@gmail.com',
           to: userEmail,
           subject: 'auto.poet',
           text: toSend

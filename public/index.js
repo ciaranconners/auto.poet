@@ -1,4 +1,4 @@
-angular.module('poem-maker', [])
+angular.module('poem-maker', ['ngMaterial'])
 .config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     'self',
